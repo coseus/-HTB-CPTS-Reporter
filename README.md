@@ -9,28 +9,30 @@ The tool is optimized for the **Hack The Box Certified Penetration Testing Speci
 ## ✨ Features
 
 ### 📥 Import Findings
+
 - Import findings from:
-  - **Nessus**
-  - **OpenVAS**
-  - **Nmap**
+    - **Nessus**
+    - **OpenVAS**
+    - **Nmap**
 - Automatic mapping:
-  - Severity
-  - Title
-  - Host
-  - CVSS
-  - CVE
-  - Description / Impact / Recommendation
+    - Severity
+    - Title
+    - Host
+    - CVSS
+    - CVE
+    - Description / Impact / Recommendation
 - Automatic severity normalization and sorting
 
 ---
 
 ### ✏️ Findings Editor
+
 - Add findings **manually** (Add → then edit)
 - Full CRUD (Add / Edit / Delete)
 - Advanced editor per finding:
-  - Description, Impact, Recommendation
-  - Code blocks with syntax highlighting
-  - Evidence images (Base64, auto-resize)
+    - Description, Impact, Recommendation
+    - Code blocks with syntax highlighting
+    - Evidence images (Base64, auto-resize)
 - Automatic renumbering
 - Filter by severity
 - Sorted automatically by severity
@@ -38,22 +40,21 @@ The tool is optimized for the **Hack The Box Certified Penetration Testing Speci
 ---
 
 ### 🧭 Walkthrough Editor
+
 - Step-by-step **Internal Network Compromise Walkthrough**
 - Each step supports:
-  - Name & description
-  - Multiple code blocks
-  - Screenshots with captions
+    - Name & description
+    - Multiple code blocks
+    - Screenshots with captions
 - Hierarchical numbering in PDF:
 5.1 Detailed Walkthrough
 5.1.1 Step 1
 5.1.2 Step 2
 
-yaml
-Copiază codul
-
 ---
 
 ### 📊 Appendix Data (Dedicated Page)
+
 Editable tables with **Add / Edit / Delete** workflow:
 
 - **8.2 Host & Service Discovery**
@@ -69,6 +70,7 @@ Editable tables with **Add / Edit / Delete** workflow:
 ---
 
 ### 📄 PDF Generation (HTB-style)
+
 - Clean, professional layout
 - Centered cover page
 - Automatic **Table of Contents**
@@ -89,6 +91,7 @@ Editable tables with **Add / Edit / Delete** workflow:
 ---
 
 ### 💾 Backup & Restore
+
 - Export full project to `report.json`
 - Restore work at any time
 - Backward-compatible with older JSON versions
@@ -100,12 +103,12 @@ Editable tables with **Add / Edit / Delete** workflow:
 htb_cpts_reporter/
 │
 ├── streamlit_app.py # Main entry point
-├── models.py # Data models
+├── [models.py](http://models.py/) # Data models
 ├── requirements.txt
 │
 ├── ui/
-│ ├── nav.py # Sidebar navigation
-│ ├── state.py # Global report state
+│ ├── [nav.py](http://nav.py/) # Sidebar navigation
+│ ├── [state.py](http://state.py/) # Global report state
 │ └── pages/
 │ ├── report_info.py
 │ ├── import_findings.py
@@ -115,45 +118,49 @@ htb_cpts_reporter/
 │ └── preview_export.py
 │
 ├── parsers/
-│ ├── nessus.py
-│ ├── openvas.py
-│ └── nmap.py
+│ ├── [nessus.py](http://nessus.py/)
+│ ├── [openvas.py](http://openvas.py/)
+│ └── [nmap.py](http://nmap.py/)
 │
 ├── report/
-│ ├── pdf.py # PDF generation logic
-│ └── styles.py # ReportLab styles
+│ ├── [pdf.py](http://pdf.py/) # PDF generation logic
+│ └── [styles.py](http://styles.py/) # ReportLab styles
 │
 └── utils/
-└── images.py
-
-yaml
+└── [images.py](http://images.py/)
 
 ---
 
 ## 🚀 Installation
 
 ### 1. Clone repository
+
 ```bash
-git clone https://github.com/yourusername/htb-cpts-reporter.git
+git clone <https://github.com/yourusername/htb-cpts-reporter.git>
 cd htb-cpts-reporter
 ```
+
 2. Create virtual environment (recommended)
+
 ```bash
 python -m venv venv
-```
 source venv/bin/activate
+```
+
+## 📝 Notes
+
+- Designed primarily for **HTB CPTS exam reports**
+- Not affiliated with Hack The Box
+- Use at your own responsibility for real engagements
+
 3. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
+
 4. Run the app
+
 ```bash
 streamlit run streamlit_app.py
 ```
-📝 Notes
-Designed primarily for HTB CPTS exam reports
-
-Not affiliated with Hack The Box
-
-Use at your own responsibility for real engagements
-
